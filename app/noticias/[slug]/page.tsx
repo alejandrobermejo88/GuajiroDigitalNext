@@ -143,13 +143,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mx-auto" style={{ maxWidth: 860, padding: '0 1.5rem', marginBottom: '2rem' }}>
             <Image
               src={noticia.imagen_url}
-              alt=""
+              alt={noticia.pie_imagen ?? ''}
               width={860}
               height={600}
               style={{ width: '100%', height: 'auto', display: 'block', filter: 'grayscale(10%)' }}
               sizes="(max-width: 768px) 100vw, 860px"
               priority
             />
+            {noticia.pie_imagen && (
+              <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '0.75rem', color: '#9E9689', fontStyle: 'italic', lineHeight: 1.5, marginTop: '0.5rem', paddingLeft: '0.125rem' }}>
+                {noticia.pie_imagen}
+              </p>
+            )}
           </div>
         )}
 

@@ -9,6 +9,7 @@ export const NAV_ITEMS = [
   { label: 'Protesta',    href: '/seccion/protesta' },
   { label: 'Régimen',     href: '/seccion/regimen' },
   { label: 'Oposición',   href: '/seccion/oposicion' },
+  { label: 'Opinión',     href: '/seccion/opinion' },
   { label: 'Denuncias',   href: '/#denuncias' },
   { label: 'Transición',  href: '/seccion/transicion' },
 ] as const

@@ -71,6 +71,7 @@ export default function NoticiaForm({ noticia, saveAction }: Props) {
   const [contenido,     setContenido]     = useState(noticia?.contenido     ?? '')
   const [categoria,     setCategoria]     = useState(noticia?.categoria     ?? 'General')
   const [imagen_url,    setImagenUrl]     = useState(noticia?.imagen_url    ?? '')
+  const [pie_imagen,    setPieImagen]     = useState(noticia?.pie_imagen    ?? '')
   const [fuente_nombre, setFuenteNombre]  = useState(noticia?.fuente_nombre ?? '')
   const [fuente_url,    setFuenteUrl]     = useState(noticia?.fuente_url    ?? '')
   const [destacada,     setDestacada]     = useState(noticia?.destacada     ?? false)
@@ -91,6 +92,7 @@ export default function NoticiaForm({ noticia, saveAction }: Props) {
     fd.set('contenido',     contenido.trim())
     fd.set('categoria',     categoria)
     fd.set('imagen_url',    imagen_url.trim())
+    fd.set('pie_imagen',    pie_imagen.trim())
     fd.set('fuente_nombre', fuente_nombre.trim())
     fd.set('fuente_url',    fuente_url.trim())
     fd.set('destacada',     destacada   ? 'true' : 'false')
@@ -219,6 +221,21 @@ export default function NoticiaForm({ noticia, saveAction }: Props) {
             onBlur={blurBorder}
           />
         </div>
+      </div>
+
+      {/* Pie de foto */}
+      <div>
+        <label style={labelSx}>Pie de foto / pie de figura (opcional)</label>
+        <input
+          type="text"
+          value={pie_imagen}
+          onChange={(e) => setPieImagen(e.target.value)}
+          placeholder="Descripción o crédito de la imagen"
+          style={inputSx}
+          onFocus={focusBorder}
+          onBlur={blurBorder}
+        />
+        <p style={noteSx}>Se muestra en letra pequeña debajo de la imagen en el artículo.</p>
       </div>
 
       {/* Fuente */}

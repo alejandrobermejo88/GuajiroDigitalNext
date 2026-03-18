@@ -14,6 +14,7 @@ function parseFormData(fd: FormData) {
   const contenido     = (fd.get('contenido')     as string ?? '').trim() || null
   const categoria     = (fd.get('categoria')     as string ?? 'General')
   const imagen_url    = (fd.get('imagen_url')    as string ?? '').trim() || null
+  const pie_imagen    = (fd.get('pie_imagen')    as string ?? '').trim() || null
   const fuente_nombre = (fd.get('fuente_nombre') as string ?? '').trim() || null
   const fuente_url    = (fd.get('fuente_url')    as string ?? '').trim() || null
   const destacada     = fd.get('destacada')   === 'true'
@@ -29,7 +30,7 @@ function parseFormData(fd: FormData) {
   if (!['borrador', 'publicada'].includes(estado))
     throw new Error('Estado inválido.')
 
-  return { titulo, slug, resumen, contenido, categoria, imagen_url,
+  return { titulo, slug, resumen, contenido, categoria, imagen_url, pie_imagen,
            fuente_nombre, fuente_url, destacada, ultima_hora, orden_portada, estado }
 }
 

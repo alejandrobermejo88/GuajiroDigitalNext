@@ -24,6 +24,7 @@ const SECTION_META: Record<string, { title: string; desc: string }> = {
   'Protesta':  { title: 'Protesta',              desc: 'Cacerolazos, manifestaciones, marchas, disturbios y estallidos sociales.' },
   'Régimen':   { title: 'Régimen',               desc: 'Movimientos internos del poder, declaraciones, cúpula y control político.' },
   'Oposición': { title: 'Oposición',             desc: 'Disidencia, presos políticos, movimientos cívicos, activistas y pronunciamientos opositores.' },
+  'Opinión':   { title: 'Opinión',               desc: 'Análisis, columnas de opinión y perspectivas sobre la realidad cubana.' },
   'Denuncias': { title: 'Denuncias ciudadanas',  desc: 'Testimonios, abusos, escasez, crisis sanitaria y denuncias de la población.' },
   'Transición':{ title: 'Transición',            desc: 'Escenarios de cambio, fracturas internas, lectura política y salidas de poder.' },
   'General':   { title: 'General',               desc: 'Información general sobre Cuba.' },

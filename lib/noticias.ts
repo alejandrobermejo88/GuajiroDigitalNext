@@ -15,6 +15,7 @@ export interface Noticia {
   contenido: string | null
   categoria: string
   imagen_url: string | null
+  pie_imagen: string | null
   fuente_nombre: string | null
   fuente_url: string | null
   estado: EstadoNoticia
@@ -30,6 +31,7 @@ export const CATEGORIAS = [
   'Protesta',
   'Régimen',
   'Oposición',
+  'Opinión',
   'Denuncias',
   'Transición',
   'General',
@@ -46,6 +48,7 @@ export const CAT_SLUG: Record<string, string> = {
   'Protesta':  'protesta',
   'Régimen':   'regimen',
   'Oposición': 'oposicion',
+  'Opinión':   'opinion',
   'Denuncias': 'denuncias',
   'Transición':'transicion',
   'General':   'general',

@@ -171,6 +171,7 @@ const EDITORIAL_SECTIONS = [
   { cat: 'Protesta',   label: 'Protesta',                 desc: 'Cacerolazos, manifestaciones, estallidos sociales' },
   { cat: 'Régimen',    label: 'Régimen',                  desc: 'Cúpula, control político, declaraciones oficiales' },
   { cat: 'Oposición',  label: 'Oposición',                desc: 'Disidencia, presos políticos, activistas' },
+  { cat: 'Opinión',    label: 'Opinión',                  desc: 'Análisis, columnas y perspectivas sobre Cuba' },
   { cat: 'Transición', label: 'Transición',               desc: 'Escenarios de cambio, fracturas internas, lectura política' },
   { cat: 'Denuncias',  label: 'Denuncias ciudadanas',     desc: 'Testimonios, abusos, crisis sanitaria' },
 ] as const
