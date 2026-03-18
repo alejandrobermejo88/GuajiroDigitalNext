@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-optical-sizing: auto;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "onum" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-optical-sizing: auto;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  ::selection {
+    background: #6B1F1F22;
+  }
+}
+
+@layer components {
+
+  /* ── Editorial rule patterns ── */
+  .rule-section {
+    border-top: 2.5px solid #151515;
+    border-bottom: 1px solid #E0D9CC;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .rule-thin {
+    border-top: 1px solid #E0D9CC;
+  }
+
+  .rule-accent {
+    border-top: 2px solid #6B1F1F;
+  }
+
+  /* ── Category label ── */
+  .cat-label {
+    display: inline-block;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #6B1F1F;
+  }
+
+  /* ── Card hover headline ── */
+  .card-hl {
+    font-family: 'Newsreader', Georgia, serif;
+    color: #151515;
+    transition: color 0.18s ease;
+    font-optical-sizing: auto;
+    text-wrap: balance;
+  }
+
+  a:hover .card-hl {
+    color: #6B1F1F;
+  }
+
+  /* ── Metadata row ── */
+  .meta-row {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.75rem;
+    color: #767676;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Lead dek (serif) ── */
+  .lead-dek {
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: #383838;
+    font-optical-sizing: auto;
+  }
+
+  /* ── Prose for articles ── */
+  .prose-editorial {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #383838;
+    font-optical-sizing: auto;
+  }
+
+  .prose-editorial p {
+    margin-bottom: 1.5rem;
+  }
+
+  .prose-editorial p:first-of-type::first-letter {
+    float: left;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 3.75rem;
+    line-height: 0.82;
+    margin-right: 0.1em;
+    margin-top: 0.08em;
+    color: #151515;
+    font-weight: 400;
+  }
+
+  /* ── Navigation link ── */
+  .nav-link {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.71875rem;
+    font-weight: 500;
+    letter-spacing: 0.035em;
+    color: #383838;
+    padding: 0.875rem 0.875rem;
+    display: block;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+
+  .nav-link:hover {
+    color: #6B1F1F;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer-link {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-link:hover {
+    color: rgba(255,255,255,0.82);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}

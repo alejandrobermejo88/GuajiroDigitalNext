@@ -1,0 +1,83 @@
+{
+  "updatedAt": "2026-03-18T00:00:00.000Z",
+  "articles": [
+    {
+      "slug": "2026-03-18-crisis-energetica-cuba-apagones-superan-20-horas",
+      "title": "Crisis energética en Cuba: los apagones superan las 20 horas diarias en provincias del oriente",
+      "description": "El Sistema Electroenergético Nacional (SEN) registra su peor crisis en décadas. Provincias como Holguín, Las Tunas y Granma sufren cortes que superan las 20 horas. El gobierno atribuye el colapso al bloqueo, mientras ingenieros del sector denuncian falta de mantenimiento y combustible.",
+      "content": "El Sistema Electroenergético Nacional de Cuba atraviesa una de las crisis más graves de su historia reciente. Las provincias orientales, históricamente las más afectadas por la distribución desigual de recursos energéticos, registran apagones que en algunos municipios superan las 20 horas diarias...",
+      "url": "https://example.com/crisis-energetica-cuba",
+      "source": "guajiro-digital",
+      "sourceName": "Guajiro Digital",
+      "publishedAt": "2026-03-18T08:00:00.000Z",
+      "category": "Apagones",
+      "imageUrl": null,
+      "featured": true
+    },
+    {
+      "slug": "2026-03-17-represion-manifestantes-11j-nuevas-condenas",
+      "title": "Nuevas condenas a manifestantes del 11J: al menos 15 cubanos reciben sentencias de hasta 25 años",
+      "description": "Tribunales cubanos emitieron nuevas condenas contra participantes en las protestas del 11 de julio de 2021. Organizaciones de derechos humanos documentan al menos 15 nuevas sentencias, algunas superiores a dos décadas de prisión.",
+      "content": "El Observatorio Cubano de Derechos Humanos (OCDH) y el grupo Prisoners Defenders han documentado nuevas condenas emitidas esta semana contra personas que participaron en las históricas manifestaciones del 11 de julio de 2021...",
+      "url": "https://example.com/condenas-11j",
+      "source": "guajiro-digital",
+      "sourceName": "Guajiro Digital",
+      "publishedAt": "2026-03-17T12:00:00.000Z",
+      "category": "Represión",
+      "imageUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "2026-03-17-emigracion-cubana-record-historico",
+      "title": "Emigración cubana alcanza récord histórico: más de 700.000 cubanos han salido del país en dos años",
+      "description": "Datos del Departamento de Seguridad Nacional de EE.UU. y organizaciones migratorias confirman que el éxodo cubano no tiene precedentes en la historia reciente de la isla. La mayoría cruza por la frontera sur de Estados Unidos.",
+      "content": "El éxodo de cubanos hacia el exterior no muestra señales de desaceleración. Según datos compilados por distintas organizaciones que monitorean los flujos migratorios del Caribe, más de 700.000 cubanos han abandonado la isla en los últimos dos años...",
+      "url": "https://example.com/emigracion-record",
+      "source": "guajiro-digital",
+      "sourceName": "Guajiro Digital",
+      "publishedAt": "2026-03-17T09:30:00.000Z",
+      "category": "Exilio",
+      "imageUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "2026-03-16-economia-cuba-inflacion-descontrolada",
+      "title": "Economía cubana: la inflación supera el 500% y el peso pierde valor aceleradamente frente al dólar",
+      "description": "El mercado informal de divisas en Cuba refleja una depreciación sostenida del peso cubano. Economistas independientes advierten que la espiral inflacionaria es estructural y no coyuntural, y que sin reformas profundas no tiene solución.",
+      "content": "El tipo de cambio informal entre el peso cubano (CUP) y el dólar estadounidense ha seguido deteriorándose durante las últimas semanas. Fuentes independientes que monitorean el mercado de divisas en la isla reportan que el dólar se cotiza a más de 300 pesos en el mercado negro...",
+      "url": "https://example.com/inflacion-cuba",
+      "source": "guajiro-digital",
+      "sourceName": "Guajiro Digital",
+      "publishedAt": "2026-03-16T14:00:00.000Z",
+      "category": "Economía",
+      "imageUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "2026-03-16-protestas-espontaneas-camaguey",
+      "title": "Protestas espontáneas en Camagüey: vecinos bloquean calles exigiendo electricidad y agua potable",
+      "description": "Residentes de varios barrios de Camagüey salieron a las calles para protestar contra la falta de servicios básicos. Las imágenes circularon en redes sociales antes de que las autoridades cortaran el acceso a internet en la zona.",
+      "content": "La madrugada del martes, vecinos de los barrios Vista Alegre y La Vigía, en la ciudad de Camagüey, bloquearon con neumáticos y escombros las principales arterias de sus comunidades en señal de protesta por los prolongados cortes de electricidad y la escasez de agua potable...",
+      "url": "https://example.com/protestas-camaguey",
+      "source": "guajiro-digital",
+      "sourceName": "Guajiro Digital",
+      "publishedAt": "2026-03-16T06:45:00.000Z",
+      "category": "Protestas",
+      "imageUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "2026-03-15-opinion-cuba-encrucijada-historica",
+      "title": "Cuba en la encrucijada: ¿cuánto tiempo más puede aguantar un régimen sin legitimidad ni recursos?",
+      "description": "Análisis sobre la situación política y económica cubana a la luz de los últimos meses. El colapso de los servicios básicos, la emigración masiva y el silencio del liderazgo político plantean preguntas fundamentales sobre el futuro de la isla.",
+      "content": "Hay momentos en que la historia se acelera. Cuba parece estar viviendo uno de esos momentos. La combinación de una crisis energética sin precedentes, una emigración masiva que vacía literalmente pueblos enteros, una economía en caída libre y una represión que no distingue entre disidentes organizados y ciudadanos hartos...",
+      "url": "https://example.com/opinion-cuba-encrucijada",
+      "source": "guajiro-digital",
+      "sourceName": "Guajiro Digital",
+      "publishedAt": "2026-03-15T10:00:00.000Z",
+      "category": "Opinión",
+      "imageUrl": null,
+      "featured": false
+    }
+  ]
+}
