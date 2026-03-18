@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getPublishedNoticiaBySlug, getRelatedNoticias } from '@/lib/noticias'
+import ShareBar from '@/components/ShareBar'
 
 export const dynamic = 'force-dynamic'
 
@@ -35,6 +36,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       publishedTime: noticia.created_at,
       ...(noticia.imagen_url ? { images: [{ url: noticia.imagen_url }] } : {}),
+    },
+    twitter: {
+      card: noticia.imagen_url ? 'summary_large_image' : 'summary',
+      title: noticia.titulo,
+      description: noticia.resumen ?? undefined,
+      ...(noticia.imagen_url ? { images: [noticia.imagen_url] } : {}),
     },
   }
 }
@@ -181,15 +188,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           )}
 
           {/* Share */}
-          <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid #E0D9CC', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <span style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C8BFB0' }}>Compartir</span>
-            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(noticia.titulo)}`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none' }}>
-              X (Twitter)
-            </a>
-            <a href={`https://wa.me/?text=${encodeURIComponent(noticia.titulo)}`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none' }}>
-              WhatsApp
-            </a>
-          </div>
+          <ShareBar titulo={noticia.titulo} />
         </div>
 
         {/* Related */}

@@ -18,7 +18,7 @@ function fmtDateShort(iso: string) {
 // ─── Section descriptions ─────────────────────────────────────────────────────
 
 const SECTION_META: Record<string, { title: string; desc: string }> = {
-  'Apagones':  { title: 'Estado eléctrico',     desc: 'Colapso energético, Unión Eléctrica, apagones, déficit y situación del SEN.' },
+  'Apagones':  { title: 'Apagones',              desc: 'Colapso energético, Unión Eléctrica, apagones, déficit y situación del SEN.' },
   'Represión': { title: 'Represión',             desc: 'Detenciones, operativos, violencia policial, vigilancia y Seguridad del Estado.' },
   'Economía':  { title: 'Economía',              desc: 'Inflación, dólar, escasez, salarios, remesas y colapso económico.' },
   'Protesta':  { title: 'Protesta',              desc: 'Cacerolazos, manifestaciones, marchas, disturbios y estallidos sociales.' },

@@ -165,7 +165,7 @@ function SectionLayoutB({ n }: { n: Noticia }) {
 // ─── Editorial section definitions ───────────────────────────────────────────
 
 const EDITORIAL_SECTIONS = [
-  { cat: 'Apagones',   label: 'Estado eléctrico',        desc: 'Colapso energético, Unión Eléctrica y apagones' },
+  { cat: 'Apagones',   label: 'Apagones',                 desc: 'Colapso energético, Unión Eléctrica y apagones' },
   { cat: 'Represión',  label: 'Represión',                desc: 'Detenciones, operativos, Seguridad del Estado' },
   { cat: 'Economía',   label: 'Economía',                 desc: 'Inflación, dólar, escasez, remesas, crisis' },
   { cat: 'Protesta',   label: 'Protesta',                 desc: 'Cacerolazos, manifestaciones, estallidos sociales' },
@@ -355,6 +355,17 @@ export default async function HomePage() {
                 {secondary.map((n, i) => (
                   <Link key={n.slug} href={`/noticias/${n.slug}`} className="block group" style={{ borderTop: i === 0 ? 'none' : '1px solid #E0D9CC', paddingTop: i === 0 ? 0 : '1.25rem', paddingBottom: '1.25rem' }}>
                     <article>
+                      {n.imagen_url && (
+                        <div style={{ position: 'relative', width: '100%', paddingBottom: '60%', overflow: 'hidden', marginBottom: '0.875rem', background: '#F0EDE6' }}>
+                          <Image
+                            src={n.imagen_url}
+                            alt=""
+                            fill
+                            style={{ objectFit: 'cover', objectPosition: 'top', filter: 'grayscale(10%)' }}
+                            sizes="(max-width: 1024px) 50vw, 220px"
+                          />
+                        </div>
+                      )}
                       <CatLabel label={n.categoria} />
                       {n.ultima_hora && (
                         <span className="font-sans" style={{ fontSize: '0.5625rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6B1F1F', marginLeft: '0.75rem' }}>
