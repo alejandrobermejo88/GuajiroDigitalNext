@@ -69,7 +69,9 @@ export default function SiteHeader({ activeSection }: Props) {
                 Urgencia MULE →
               </Link>
             </div>
-            <SearchButton />
+            <div style={{ paddingLeft: '1rem', borderLeft: '1px solid #E0D9CC', flexShrink: 0 }}>
+              <SearchButton />
+            </div>
           </div>
         </nav>
       </header>
