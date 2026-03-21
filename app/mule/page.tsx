@@ -184,7 +184,7 @@ export default function MulePage() {
           </div>
 
           {/* Columna derecha: formulario */}
-          <div>
+          <div id="enviar-caso">
             <div style={{ borderTop: '2.5px solid #151515', paddingTop: '1.5rem', marginBottom: '1.5rem' }}>
               <h2
                 className="font-serif font-normal text-ink"

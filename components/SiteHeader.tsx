@@ -33,9 +33,15 @@ export default function SiteHeader({ activeSection }: Props) {
               Guajiro Digital
             </span>
           </Link>
-          <Link href="/denuncias" className="font-sans" style={{ fontSize: '0.8125rem', color: '#767676', textDecoration: 'none' }}>
-            Enviar denuncia →
-          </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexShrink: 0 }}>
+            <Link href="/#denuncias" className="font-sans" style={{ fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+              Enviar denuncia →
+            </Link>
+            <span style={{ color: '#E0D9CC', fontSize: '0.75rem', flexShrink: 0 }}>·</span>
+            <Link href="/mule#enviar-caso" className="font-sans" style={{ fontSize: '0.8125rem', color: activeSection === 'MULE' ? '#151515' : '#767676', textDecoration: 'none', whiteSpace: 'nowrap', fontWeight: activeSection === 'MULE' ? 500 : 400 }}>
+              Urgencia MULE →
+            </Link>
+          </div>
         </div>
 
         {/* Navigation */}
