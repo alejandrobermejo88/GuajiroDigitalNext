@@ -213,7 +213,7 @@ export default function MuleForm() {
       {/* Campos secundarios */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem' }}>
         <div>
-          <label style={{ ...labelStyle, color: '#C8BFB0' }} htmlFor="m-nombre">Nombre (opcional)</label>
+          <label style={{ ...labelStyle, color: '#C8BFB0' }} htmlFor="m-nombre">Nombre</label>
           <input
             id="m-nombre"
             type="text"
@@ -226,7 +226,7 @@ export default function MuleForm() {
           />
         </div>
         <div>
-          <label style={{ ...labelStyle, color: '#C8BFB0' }} htmlFor="m-persona">Persona afectada (opcional)</label>
+          <label style={{ ...labelStyle, color: '#C8BFB0' }} htmlFor="m-persona">Persona afectada</label>
           <input
             id="m-persona"
             type="text"
