@@ -127,50 +127,36 @@ export default function MuleForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
 
-      {/* Nombre + Teléfono */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-        <div>
-          <label style={labelStyle} htmlFor="m-nombre">Nombre de contacto</label>
-          <input
-            id="m-nombre"
-            type="text"
-            value={fields.nombre}
-            onChange={e => update('nombre', e.target.value)}
-            placeholder="Opcional — puede ser anónimo"
-            style={inputStyle}
-            onFocus={focus}
-            onBlur={blur}
-          />
-        </div>
-        <div>
-          <label style={labelStyle} htmlFor="m-telefono">Teléfono de contacto *</label>
-          <input
-            id="m-telefono"
-            type="tel"
-            required
-            value={fields.telefono}
-            onChange={e => update('telefono', e.target.value)}
-            placeholder="+53 5 000 0000"
-            style={inputStyle}
-            onFocus={focus}
-            onBlur={blur}
-          />
-          <p style={noteStyle}>No se publicará sin consentimiento expreso.</p>
-        </div>
+      {/* Teléfono — campo prioritario */}
+      <div>
+        <label style={labelStyle} htmlFor="m-telefono">Teléfono de contacto *</label>
+        <input
+          id="m-telefono"
+          type="tel"
+          required
+          value={fields.telefono}
+          onChange={e => update('telefono', e.target.value)}
+          placeholder="+53 5 000 0000"
+          style={inputStyle}
+          onFocus={focus}
+          onBlur={blur}
+        />
+        <p style={noteStyle}>No se publicará sin consentimiento expreso.</p>
       </div>
 
       {/* Localidad + Tipo */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem' }}>
         <div>
-          <label style={labelStyle} htmlFor="m-localidad">Localidad o municipio</label>
+          <label style={labelStyle} htmlFor="m-localidad">Localidad *</label>
           <input
             id="m-localidad"
             type="text"
+            required
             value={fields.localidad}
             onChange={e => update('localidad', e.target.value)}
-            placeholder="Ej: Centro Habana, Holguín…"
+            placeholder="Municipio o barrio"
             style={inputStyle}
             onFocus={focus}
             onBlur={blur}
@@ -193,31 +179,16 @@ export default function MuleForm() {
         </div>
       </div>
 
-      {/* Persona afectada */}
-      <div>
-        <label style={labelStyle} htmlFor="m-persona">Persona o personas afectadas</label>
-        <input
-          id="m-persona"
-          type="text"
-          value={fields.persona_afectada}
-          onChange={e => update('persona_afectada', e.target.value)}
-          placeholder="Ej: niña de 4 años, anciana de 78 años, familia de 5…"
-          style={inputStyle}
-          onFocus={focus}
-          onBlur={blur}
-        />
-      </div>
-
       {/* Descripción */}
       <div>
-        <label style={labelStyle} htmlFor="m-desc">Descripción de la situación *</label>
+        <label style={labelStyle} htmlFor="m-desc">Descripción *</label>
         <textarea
           id="m-desc"
           required
-          rows={4}
+          rows={3}
           value={fields.descripcion}
           onChange={e => update('descripcion', e.target.value)}
-          placeholder="Describe la situación con el mayor detalle posible…"
+          placeholder="Describe brevemente la situación…"
           style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
           onFocus={focus}
           onBlur={blur}
@@ -227,17 +198,46 @@ export default function MuleForm() {
       {/* Necesidad concreta */}
       <div>
         <label style={labelStyle} htmlFor="m-necesidad">Necesidad concreta</label>
-        <textarea
+        <input
           id="m-necesidad"
-          rows={2}
-          value={fields.necesidad_concreta}
+          type="text"
+          value={fields.necesidad_concreta ?? ''}
           onChange={e => update('necesidad_concreta', e.target.value)}
-          placeholder="Ej: Insulina 30 UI, leche en polvo, pañales talla 3…"
-          style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
+          placeholder="Ej: Insulina 30 UI, leche en polvo, pañales…"
+          style={inputStyle}
           onFocus={focus}
           onBlur={blur}
         />
-        <p style={noteStyle}>Cuanto más específica sea la necesidad, más fácil es canalizarla.</p>
+      </div>
+
+      {/* Campos secundarios */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem' }}>
+        <div>
+          <label style={{ ...labelStyle, color: '#C8BFB0' }} htmlFor="m-nombre">Nombre (opcional)</label>
+          <input
+            id="m-nombre"
+            type="text"
+            value={fields.nombre}
+            onChange={e => update('nombre', e.target.value)}
+            placeholder="Anónimo si prefiere"
+            style={{ ...inputStyle, color: '#767676' }}
+            onFocus={focus}
+            onBlur={blur}
+          />
+        </div>
+        <div>
+          <label style={{ ...labelStyle, color: '#C8BFB0' }} htmlFor="m-persona">Persona afectada (opcional)</label>
+          <input
+            id="m-persona"
+            type="text"
+            value={fields.persona_afectada}
+            onChange={e => update('persona_afectada', e.target.value)}
+            placeholder="Ej: niña 4 años…"
+            style={{ ...inputStyle, color: '#767676' }}
+            onFocus={focus}
+            onBlur={blur}
+          />
+        </div>
       </div>
 
       {/* Error */}

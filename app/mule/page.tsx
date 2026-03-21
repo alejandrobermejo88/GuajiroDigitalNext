@@ -4,140 +4,74 @@ import MuleForm from '@/components/MuleForm'
 
 export const metadata = {
   title: 'Sistema MULE — Guajiro Digital',
-  description: 'Mecanismo Unificado de Logística de Emergencia. Canal de visibilización y conexión para urgencias reales: medicamentos, alimentos y necesidades básicas de sectores vulnerables.',
+  description: 'Mecanismo Unificado de Logística de Emergencia. Canal de visibilización y conexión para urgencias reales: medicamentos, alimentos y necesidades básicas.',
 }
-
-// ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function MulePage() {
   return (
     <>
       <SiteHeader activeSection="MULE" />
 
-      <main className="mx-auto" style={{ maxWidth: 940, padding: '3.5rem 2rem 5rem' }}>
+      <main className="mx-auto" style={{ maxWidth: 940, padding: '3rem 2rem 5rem' }}>
 
-        {/* ── Cabecera MULE ── */}
-        <div style={{ marginBottom: '3rem', borderBottom: '2.5px solid #151515', paddingBottom: '1.5rem' }}>
-          <p
-            style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '0.625rem',
-              fontWeight: 700,
-              letterSpacing: '0.28em',
-              textTransform: 'uppercase',
-              color: '#9E9689',
-              marginBottom: '0.875rem',
-            }}
-          >
+        {/* ── Cabecera ── */}
+        <div style={{ marginBottom: '2.5rem', borderBottom: '2.5px solid #151515', paddingBottom: '1.25rem' }}>
+          <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '0.625rem', fontWeight: 700, letterSpacing: '0.28em', textTransform: 'uppercase', color: '#9E9689', marginBottom: '0.75rem' }}>
             Sistema MULE
           </p>
-          <div style={{ borderTop: '1px solid #E0D9CC', marginBottom: '1.25rem' }} />
-          <h1
-            className="font-serif font-normal text-ink"
-            style={{ fontSize: 'clamp(1.625rem, 3.5vw, 2.5rem)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '0.875rem' }}
-          >
+          <div style={{ borderTop: '1px solid #E0D9CC', marginBottom: '1rem' }} />
+          <h1 className="font-serif font-normal text-ink" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '0.75rem' }}>
             Mecanismo Unificado de Logística de Emergencia
           </h1>
-          <p
-            className="font-sans"
-            style={{ fontSize: '0.9375rem', lineHeight: 1.65, color: '#4B4B4B', maxWidth: '42rem' }}
-          >
-            Canal de visibilización y conexión para urgencias reales que afectan a sectores vulnerables.
-            No es una institución. No garantiza solución universal. Visibiliza y conecta.
+          <p className="font-sans" style={{ fontSize: '0.9375rem', lineHeight: 1.6, color: '#4B4B4B', maxWidth: '38rem' }}>
+            Canal de visibilización y conexión para urgencias reales. No garantiza solución universal. Facilita conexiones directas entre quienes necesitan ayuda y quienes pueden ofrecerla.
           </p>
         </div>
 
-        {/* ── Contenido principal ── */}
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr]" style={{ gap: '3rem 4rem', alignItems: 'start' }}>
+        {/* ── Contenido + formulario ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '3rem 4rem', alignItems: 'start' }}>
 
-          {/* Columna izquierda: textos institucionales */}
+          {/* Columna izquierda */}
           <div>
 
             {/* Texto institucional */}
-            <section style={{ marginBottom: '2.5rem' }}>
-              <p
-                className="font-sans"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.75, color: '#383838', marginBottom: '1rem' }}
-              >
-                Guajiro Digital es un proyecto periodístico independiente impulsado por el Equipo Guajiro
-                Digital. Nace de la necesidad de ofrecer una lectura más clara, rigurosa y honesta de la
-                realidad cubana frente a coberturas que, por sesgo, equidistancia o falta de contexto, no
-                siempre reflejan con precisión lo que sucede en la isla.
-              </p>
-              <p
-                className="font-sans"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.75, color: '#383838', marginBottom: '1rem' }}
-              >
-                El Sistema MULE nace como una extensión de ese compromiso, orientado a visibilizar urgencias
-                reales que afectan a sectores vulnerables. Se centra en necesidades concretas —medicinas,
-                alimentos y recursos básicos— con el objetivo de facilitar conexiones directas entre quienes
-                necesitan ayuda y quienes pueden ofrecerla.
-              </p>
-              <p
-                className="font-sans"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.75, color: '#383838', marginBottom: '1rem' }}
-              >
-                Cada caso se gestiona de forma local y particular. Guajiro Digital actúa como canal de
-                visibilización y conexión, pero no sustituye instituciones ni garantiza resolución universal
-                de las situaciones.
-              </p>
-              <p
-                className="font-sans"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.75, color: '#383838' }}
-              >
-                La dirección editorial del proyecto está respaldada por formación científica y una cultura
-                de rigor, método y verificación.
-              </p>
-            </section>
+            <p className="font-sans" style={{ fontSize: '0.9375rem', lineHeight: 1.7, color: '#383838', marginBottom: '2rem' }}>
+              El Sistema MULE nace como extensión del compromiso editorial de Guajiro Digital, orientado a visibilizar urgencias concretas —medicinas, alimentos y necesidades básicas— que afectan a sectores vulnerables. Cada caso se gestiona de forma local. Guajiro Digital actúa como canal, no como garante de resolución.
+            </p>
 
             {/* Qué canalizamos */}
-            <section style={{ marginBottom: '2.5rem', borderTop: '1px solid #E0D9CC', paddingTop: '2rem' }}>
-              <h2
-                className="font-sans font-semibold"
-                style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1.25rem' }}
-              >
+            <section style={{ marginBottom: '1.75rem', borderTop: '1px solid #E0D9CC', paddingTop: '1.5rem' }}>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.875rem' }}>
                 Qué canalizamos
               </h2>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', listStyle: 'none', padding: 0, margin: 0 }}>
                 {[
-                  'Medicamentos urgentes, especialmente para menores y pacientes crónicos',
-                  'Alimentos básicos para familias en situación de vulnerabilidad extrema',
-                  'Ayuda a familias con menores, enfermos o ancianos en situación crítica',
-                  'Urgencias localizadas verificables con necesidad concreta identificada',
-                  'Necesidades básicas no cubiertas por ningún canal institucional disponible',
+                  'Medicamentos urgentes — menores y pacientes crónicos',
+                  'Alimentos básicos — familias en situación crítica',
+                  'Urgencias localizadas con necesidad concreta identificada',
                 ].map((item, i) => (
-                  <li key={i} style={{ display: 'flex', gap: '0.75rem', alignItems: 'baseline' }}>
-                    <span className="font-sans" style={{ fontSize: '0.75rem', color: '#C8BFB0', flexShrink: 0, marginTop: '0.1rem' }}>—</span>
-                    <span className="font-sans" style={{ fontSize: '0.9375rem', lineHeight: 1.65, color: '#383838' }}>{item}</span>
+                  <li key={i} style={{ display: 'flex', gap: '0.625rem', alignItems: 'baseline' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#C8BFB0', flexShrink: 0 }}>—</span>
+                    <span className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.6, color: '#383838' }}>{item}</span>
                   </li>
                 ))}
               </ul>
             </section>
 
             {/* Cómo funciona */}
-            <section style={{ marginBottom: '2.5rem', borderTop: '1px solid #E0D9CC', paddingTop: '2rem' }}>
-              <h2
-                className="font-sans font-semibold"
-                style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1.25rem' }}
-              >
+            <section style={{ marginBottom: '1.75rem', borderTop: '1px solid #E0D9CC', paddingTop: '1.5rem' }}>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.875rem' }}>
                 Cómo funciona
               </h2>
-              <ol style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0, counterReset: 'mule-steps' }}>
+              <ol style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', listStyle: 'none', padding: 0, margin: 0 }}>
                 {[
-                  ['Recepción', 'El caso llega a través del formulario con la información necesaria para valorarlo.'],
-                  ['Revisión mínima', 'El equipo verifica que la urgencia es real, localizada y tiene necesidad concreta identificable.'],
-                  ['Visibilización o canalización', 'Si procede, se publica o se traslada a quienes puedan ayudar directamente.'],
-                  ['Contacto directo', 'Se facilita la conexión entre las partes implicadas de forma controlada.'],
-                  ['Resolución local', 'Cada caso tiene su propio contexto. No existe un protocolo universal.'],
-                ].map(([title, desc], i) => (
-                  <li key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'baseline' }}>
-                    <span
-                      className="font-sans"
-                      style={{ fontSize: '0.625rem', fontWeight: 700, letterSpacing: '0.08em', color: '#C8BFB0', flexShrink: 0, minWidth: '1.25rem' }}
-                    >
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="font-sans" style={{ fontSize: '0.9375rem', lineHeight: 1.65, color: '#383838' }}>
+                  ['01', 'Recepción', 'Tu caso llega a través del formulario.'],
+                  ['02', 'Revisión',  'Verificamos que la urgencia es real y localizable.'],
+                  ['03', 'Conexión',  'Facilitamos contacto directo entre las partes.'],
+                ].map(([num, title, desc]) => (
+                  <li key={num} style={{ display: 'flex', gap: '0.875rem', alignItems: 'baseline' }}>
+                    <span className="font-sans" style={{ fontSize: '0.625rem', fontWeight: 700, color: '#C8BFB0', flexShrink: 0, minWidth: '1.25rem' }}>{num}</span>
+                    <span className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.6, color: '#383838' }}>
                       <strong style={{ fontWeight: 600, color: '#151515' }}>{title}.</strong>{' '}{desc}
                     </span>
                   </li>
@@ -145,56 +79,35 @@ export default function MulePage() {
               </ol>
             </section>
 
-            {/* Advertencia */}
-            <section style={{ borderTop: '1px solid #E0D9CC', paddingTop: '2rem' }}>
-              <h2
-                className="font-sans font-semibold"
-                style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1.25rem' }}
-              >
+            {/* Límites */}
+            <section style={{ borderTop: '1px solid #E0D9CC', paddingTop: '1.5rem' }}>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.875rem' }}>
                 Límites y alcance
               </h2>
-              <div
-                style={{
-                  padding: '1.25rem 1.5rem',
-                  borderLeft: '3px solid #E0D9CC',
-                  background: '#FEFCF8',
-                }}
-              >
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', listStyle: 'none', padding: 0, margin: 0 }}>
-                  {[
-                    'No se garantiza solución en ningún caso.',
-                    'El Sistema MULE no es una estructura institucional.',
-                    'No existe cobertura universal ni capacidad de atender todas las urgencias.',
-                    'Cada caso depende de sus circunstancias reales y del contexto local.',
-                    'Guajiro Digital visibiliza y conecta; no sustituye servicios públicos ni asistencia formal.',
-                  ].map((item, i) => (
-                    <li key={i} style={{ display: 'flex', gap: '0.625rem', alignItems: 'baseline' }}>
-                      <span className="font-sans" style={{ fontSize: '0.75rem', color: '#C8BFB0', flexShrink: 0 }}>—</span>
-                      <span className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.6, color: '#4B4B4B' }}>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="font-sans" style={{ fontSize: '0.8125rem', color: '#9E9689', lineHeight: 1.6, marginTop: '1rem', fontStyle: 'italic' }}>
-                Los datos de contacto facilitados —especialmente el número de teléfono— no se publicarán
-                sin consentimiento explícito. Solo se utilizarán para la gestión interna del caso.
-              </p>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', padding: 0, margin: 0 }}>
+                {[
+                  'Sin garantía de resolución en ningún caso.',
+                  'No es estructura institucional ni servicio público.',
+                  'Tu teléfono no se publica sin consentimiento explícito.',
+                ].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', gap: '0.625rem', alignItems: 'baseline' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#C8BFB0', flexShrink: 0 }}>—</span>
+                    <span className="font-sans" style={{ fontSize: '0.8125rem', lineHeight: 1.55, color: '#4B4B4B' }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </section>
 
           </div>
 
           {/* Columna derecha: formulario */}
           <div id="enviar-caso">
-            <div style={{ borderTop: '2.5px solid #151515', paddingTop: '1.5rem', marginBottom: '1.5rem' }}>
-              <h2
-                className="font-serif font-normal text-ink"
-                style={{ fontSize: '1.375rem', lineHeight: 1.2, letterSpacing: '-0.012em', marginBottom: '0.625rem' }}
-              >
+            <div style={{ borderTop: '2.5px solid #151515', paddingTop: '1.25rem', marginBottom: '1.25rem' }}>
+              <h2 className="font-serif font-normal text-ink" style={{ fontSize: '1.25rem', lineHeight: 1.2, letterSpacing: '-0.012em', marginBottom: '0.5rem' }}>
                 Enviar un caso
               </h2>
-              <p className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.6, color: '#767676', marginBottom: '1.5rem' }}>
-                Rellena el formulario con el mayor detalle posible.
-                Los campos marcados con * son obligatorios.
+              <p className="font-sans" style={{ fontSize: '0.8125rem', lineHeight: 1.6, color: '#767676' }}>
+                Los campos con * son obligatorios.
               </p>
             </div>
             <MuleForm />
@@ -202,13 +115,9 @@ export default function MulePage() {
 
         </div>
 
-        {/* Back link */}
-        <div style={{ borderTop: '1px solid #E0D9CC', paddingTop: '2rem', marginTop: '4rem' }}>
-          <Link
-            href="/"
-            className="font-sans"
-            style={{ fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', letterSpacing: '0.02em' }}
-          >
+        {/* Volver */}
+        <div style={{ borderTop: '1px solid #E0D9CC', paddingTop: '1.75rem', marginTop: '3.5rem' }}>
+          <Link href="/" className="font-sans" style={{ fontSize: '0.8125rem', color: '#767676', textDecoration: 'none' }}>
             ← Volver a portada
           </Link>
         </div>

@@ -279,13 +279,23 @@ export default async function HomePage() {
                   <Link
                     href={href}
                     className="nav-link"
-                    style={href === '/mule' ? { color: '#6B1F1F', fontWeight: 600, letterSpacing: '0.08em' } : undefined}
                   >
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0, paddingLeft: '1rem', borderLeft: '1px solid #E0D9CC' }}>
+              <Link href="/#denuncias" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#383838', flexShrink: 0 }} />
+                Enviar denuncia →
+              </Link>
+              <span style={{ color: '#E0D9CC', fontSize: '0.625rem', flexShrink: 0 }}>·</span>
+              <Link href="/mule#enviar-caso" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#6B1F1F', flexShrink: 0 }} />
+                Urgencia MULE →
+              </Link>
+            </div>
             <SearchButton />
           </div>
         </nav>
