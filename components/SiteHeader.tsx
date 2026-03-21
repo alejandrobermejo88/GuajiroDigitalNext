@@ -33,6 +33,17 @@ export default function SiteHeader({ activeSection }: Props) {
               Guajiro Digital
             </span>
           </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexShrink: 0 }}>
+            <Link href="/#denuncias" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+              <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#383838', flexShrink: 0 }} />
+              Enviar denuncia →
+            </Link>
+            <Link href="/mule#enviar-caso" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: activeSection === 'MULE' ? '#151515' : '#767676', textDecoration: 'none', whiteSpace: 'nowrap', fontWeight: activeSection === 'MULE' ? 500 : 400 }}>
+              <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#6B1F1F', flexShrink: 0 }} />
+              MULE →
+            </Link>
+            <SearchButton />
+          </div>
         </div>
 
         {/* Navigation */}
@@ -58,17 +69,6 @@ export default function SiteHeader({ activeSection }: Props) {
                 </li>
               ))}
             </ul>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexShrink: 0, marginLeft: '0.75rem', paddingLeft: '1.25rem', borderLeft: '1px solid #E0D9CC' }}>
-              <Link href="/#denuncias" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#383838', flexShrink: 0 }} />
-                Enviar denuncia →
-              </Link>
-              <Link href="/mule#enviar-caso" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: activeSection === 'MULE' ? '#151515' : '#767676', textDecoration: 'none', whiteSpace: 'nowrap', fontWeight: activeSection === 'MULE' ? 500 : 400 }}>
-                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#6B1F1F', flexShrink: 0 }} />
-                MULE →
-              </Link>
-              <SearchButton />
-            </div>
           </div>
         </nav>
       </header>

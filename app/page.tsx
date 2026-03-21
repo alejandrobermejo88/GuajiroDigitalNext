@@ -250,6 +250,19 @@ export default async function HomePage() {
           <div style={{ borderTop: '1px solid #E0D9CC', marginTop: 3 }} />
         </div>
 
+        {/* Functional actions */}
+        <div className="mx-auto flex items-center justify-end" style={{ maxWidth: 1140, padding: '0.625rem 2rem', gap: '1.5rem' }}>
+          <Link href="/#denuncias" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#383838', flexShrink: 0 }} />
+            Enviar denuncia →
+          </Link>
+          <Link href="/mule#enviar-caso" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#6B1F1F', flexShrink: 0 }} />
+            MULE →
+          </Link>
+          <SearchButton />
+        </div>
+
         {/* Breaking bar — latest última hora or lead */}
         {latestBreaking && (
           <div style={{ background: '#6B1F1F' }}>
@@ -285,17 +298,6 @@ export default async function HomePage() {
                 </li>
               ))}
             </ul>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexShrink: 0, marginLeft: '0.75rem', paddingLeft: '1.25rem', borderLeft: '1px solid #E0D9CC' }}>
-              <Link href="/#denuncias" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#383838', flexShrink: 0 }} />
-                Enviar denuncia →
-              </Link>
-              <Link href="/mule#enviar-caso" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#6B1F1F', flexShrink: 0 }} />
-                MULE →
-              </Link>
-              <SearchButton />
-            </div>
           </div>
         </nav>
       </header>
@@ -469,8 +471,8 @@ export default async function HomePage() {
               <p className="font-sans" style={{ fontSize: '0.9375rem', lineHeight: 1.65, color: '#4B4B4B' }}>
                 Canal de visibilización y conexión para urgencias reales: medicamentos urgentes, alimentos básicos y necesidades críticas de familias vulnerables en Cuba.
               </p>
-              <Link href="/mule" className="font-sans font-medium" style={{ fontSize: '0.875rem', color: '#6B1F1F', textDecoration: 'none', letterSpacing: '0.02em' }}>
-                Acceder al Sistema MULE →
+              <Link href="/mule#enviar-caso" className="font-sans font-medium" style={{ fontSize: '0.875rem', color: '#6B1F1F', textDecoration: 'none', letterSpacing: '0.02em', borderBottom: '1px solid #6B1F1F', paddingBottom: '1px', alignSelf: 'flex-start' }}>
+                Enviar un caso urgente →
               </Link>
             </div>
           </div>
