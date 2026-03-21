@@ -65,7 +65,7 @@ export default function SiteHeader({ activeSection }: Props) {
               </Link>
               <Link href="/mule#enviar-caso" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: activeSection === 'MULE' ? '#151515' : '#767676', textDecoration: 'none', whiteSpace: 'nowrap', fontWeight: activeSection === 'MULE' ? 500 : 400 }}>
                 <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#6B1F1F', flexShrink: 0 }} />
-                Urgencia MULE →
+                MULE →
               </Link>
               <SearchButton />
             </div>
