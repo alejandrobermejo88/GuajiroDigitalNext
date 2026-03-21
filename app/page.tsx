@@ -276,7 +276,11 @@ export default async function HomePage() {
             <ul className="flex items-center overflow-x-auto scrollbar-none flex-1">
               {NAV_ITEMS.map(({ label, href }) => (
                 <li key={label}>
-                  <Link href={href} className="nav-link">
+                  <Link
+                    href={href}
+                    className="nav-link"
+                    style={href === '/mule' ? { color: '#6B1F1F', fontWeight: 600, letterSpacing: '0.08em' } : undefined}
+                  >
                     {label}
                   </Link>
                 </li>
@@ -440,6 +444,28 @@ export default async function HomePage() {
             </section>
           )
         })}
+
+        {/* ── Sistema MULE ── */}
+        <section id="mule" style={{ borderTop: '1px solid #E0D9CC', padding: '2.5rem 0', marginBottom: '0' }}>
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]" style={{ gap: '1.5rem 4rem', alignItems: 'start' }}>
+            <div>
+              <p className="font-sans" style={{ fontSize: '0.5875rem', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#9E9689', marginBottom: '0.5rem' }}>
+                Sistema MULE
+              </p>
+              <h2 className="font-serif font-normal text-ink" style={{ fontSize: '1.375rem', lineHeight: 1.18, letterSpacing: '-0.012em', marginBottom: '0.625rem' }}>
+                Mecanismo Unificado de Logística de Emergencia
+              </h2>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', justifyContent: 'center' }}>
+              <p className="font-sans" style={{ fontSize: '0.9375rem', lineHeight: 1.65, color: '#4B4B4B' }}>
+                Canal de visibilización y conexión para urgencias reales: medicamentos urgentes, alimentos básicos y necesidades críticas de familias vulnerables en Cuba.
+              </p>
+              <Link href="/mule" className="font-sans font-medium" style={{ fontSize: '0.875rem', color: '#6B1F1F', textDecoration: 'none', letterSpacing: '0.02em' }}>
+                Acceder al Sistema MULE →
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* ── Denuncias form ── */}
         <section id="denuncias" style={{ borderTop: '2.5px solid #151515', borderBottom: '1px solid #E0D9CC', padding: '3.5rem 0', marginBottom: '0' }}>

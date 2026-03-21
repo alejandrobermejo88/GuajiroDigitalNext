@@ -3,6 +3,7 @@
 export const NAV_ITEMS = [
   { label: 'Portada',     href: '/' },
   { label: 'Última hora', href: '/ultima-hora' },
+  { label: 'MULE',        href: '/mule' },
   { label: 'Apagones',    href: '/seccion/apagones' },
   { label: 'Represión',   href: '/seccion/represion' },
   { label: 'Economía',    href: '/seccion/economia' },

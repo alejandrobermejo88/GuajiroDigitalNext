@@ -51,9 +51,12 @@ export default function SiteHeader({ activeSection }: Props) {
                   <Link
                     href={href}
                     className="nav-link"
-                    style={activeSection === label
-                      ? { color: '#6B1F1F', fontWeight: 600, borderBottom: '2px solid #6B1F1F' }
-                      : undefined
+                    style={
+                      activeSection === label
+                        ? { color: '#6B1F1F', fontWeight: 600, borderBottom: '2px solid #6B1F1F' }
+                        : href === '/mule' && activeSection !== label
+                        ? { color: '#6B1F1F', fontWeight: 600, letterSpacing: '0.08em' }
+                        : undefined
                     }
                   >
                     {label}
