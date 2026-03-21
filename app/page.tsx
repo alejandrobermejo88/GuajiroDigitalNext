@@ -285,7 +285,7 @@ export default async function HomePage() {
                 </li>
               ))}
             </ul>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexShrink: 0, paddingLeft: '1.25rem', borderLeft: '1px solid #E0D9CC' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexShrink: 0, marginLeft: '0.75rem', paddingLeft: '1.25rem', borderLeft: '1px solid #E0D9CC' }}>
               <Link href="/#denuncias" className="font-sans" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem', color: '#767676', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                 <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: '#383838', flexShrink: 0 }} />
                 Enviar denuncia →
