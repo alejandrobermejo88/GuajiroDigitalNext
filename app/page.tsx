@@ -4,6 +4,7 @@ import { getPublishedNoticias } from '@/lib/noticias'
 import { CAT_SLUG } from '@/lib/noticias'
 import type { Noticia } from '@/lib/noticias'
 import DenunciasForm from '@/components/DenunciasForm'
+import SearchButton from '@/components/SearchButton'
 import { NAV_ITEMS } from '@/lib/nav'
 
 export const revalidate = 60
@@ -227,7 +228,7 @@ export default async function HomePage() {
       <header className="bg-bg">
         <div className="mx-auto" style={{ maxWidth: 1140, padding: '3rem 2rem 0' }}>
           <p className="text-center font-sans" style={{ fontSize: '0.625rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#C8BFB0', marginBottom: '1.25rem' }}>
-            Fundado en España · 2026
+            Fundado en España · 18 de marzo de 2026
           </p>
           <div style={{ borderTop: '1px solid #E0D9CC', marginBottom: '1.75rem' }} />
 
@@ -271,8 +272,8 @@ export default async function HomePage() {
 
         {/* Navigation */}
         <nav className="bg-bg/95 sticky top-0 z-40" style={{ backdropFilter: 'blur(8px)', borderBottom: '1px solid #E0D9CC' }} aria-label="Secciones">
-          <div className="mx-auto" style={{ maxWidth: 1140, padding: '0 2rem' }}>
-            <ul className="flex items-center overflow-x-auto scrollbar-none">
+          <div className="mx-auto flex items-center" style={{ maxWidth: 1140, padding: '0 2rem' }}>
+            <ul className="flex items-center overflow-x-auto scrollbar-none flex-1">
               {NAV_ITEMS.map(({ label, href }) => (
                 <li key={label}>
                   <Link href={href} className="nav-link">
@@ -281,6 +282,7 @@ export default async function HomePage() {
                 </li>
               ))}
             </ul>
+            <SearchButton />
           </div>
         </nav>
       </header>
@@ -463,6 +465,42 @@ export default async function HomePage() {
       {/* ── Footer ── */}
       <footer style={{ background: '#111111' }}>
         <div className="mx-auto" style={{ maxWidth: 1140, padding: '3.5rem 2rem 2.5rem' }}>
+
+          {/* Quiénes somos — bloque institucional completo */}
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '2rem 5rem', paddingBottom: '2.75rem', borderBottom: '1px solid rgba(255,255,255,0.07)', marginBottom: '2.75rem' }}>
+            <div>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: '1rem' }}>
+                Quiénes somos
+              </h2>
+              <p className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)' }}>
+                Guajiro Digital es un proyecto periodístico independiente impulsado por el Equipo Guajiro Digital. Nace de la necesidad de ofrecer una lectura más clara, rigurosa y honesta de la realidad cubana frente a coberturas que, por sesgo, equidistancia o falta de contexto, no siempre reflejan con precisión lo que sucede en la isla.
+              </p>
+              <p className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)', marginTop: '0.875rem' }}>
+                Es un proyecto sin ánimo de lucro y de acceso libre: no exige suscripción para leer. Su prioridad es informar con claridad, sin artificios y sin barreras innecesarias. La dirección editorial del proyecto está respaldada por formación científica y una cultura de rigor, método y verificación.
+              </p>
+            </div>
+            <div>
+              <h2 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: '1rem' }}>
+                Principios editoriales
+              </h2>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', listStyle: 'none', margin: 0, padding: 0 }}>
+                {[
+                  'Independencia editorial. Sin financiación de gobiernos, instituciones ni partidos políticos.',
+                  'Acceso libre. Sin muros de pago, sin suscripciones, sin registros obligatorios.',
+                  'Privacidad. Sin cookies ni rastreo de lectores.',
+                  'Verificación. Ningún contenido se publica sin comprobación previa.',
+                  'Claridad. Información directa sobre Cuba, sin relativizaciones ni eufemismos.',
+                ].map((item, i) => (
+                  <li key={i} className="font-sans" style={{ fontSize: '0.8125rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.38)', display: 'flex', gap: '0.625rem' }}>
+                    <span style={{ color: 'rgba(255,255,255,0.18)', flexShrink: 0 }}>—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Logo + secciones + participar */}
           <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr_1fr]" style={{ gap: '2.5rem 4rem', marginBottom: '3rem' }}>
             <div>
               <div className="flex items-center" style={{ gap: '0.75rem', marginBottom: '1.25rem' }}>
@@ -471,11 +509,11 @@ export default async function HomePage() {
                 </div>
                 <span className="font-serif font-normal" style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.85)' }}>Guajiro Digital</span>
               </div>
-              <p className="font-sans" style={{ fontSize: '0.875rem', lineHeight: 1.65, color: 'rgba(255,255,255,0.38)', maxWidth: '22rem' }}>
-                Periodismo independiente sobre Cuba. Cobertura sin filtros: apagones, represión, economía, protesta, régimen, oposición y transición.
+              <p className="font-sans" style={{ fontSize: '0.8125rem', lineHeight: 1.65, color: 'rgba(255,255,255,0.28)', fontStyle: 'italic' }}>
+                Chapeando con la derecha, porque la izquierda no funciona
               </p>
-              <p className="font-sans" style={{ fontSize: '0.6875rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.2)', marginTop: '1.25rem' }}>
-                Fundado en España · 2026
+              <p className="font-sans" style={{ fontSize: '0.6875rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.16)', marginTop: '1.25rem' }}>
+                Fundado en España · 18 de marzo de 2026
               </p>
             </div>
             <div>
@@ -483,20 +521,21 @@ export default async function HomePage() {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
                 {[
                   { label: 'Última hora', href: '/ultima-hora' },
-                  { label: 'Apagones',   href: '/seccion/apagones' },
-                  { label: 'Represión',  href: '/seccion/represion' },
-                  { label: 'Economía',   href: '/seccion/economia' },
-                  { label: 'Protesta',   href: '/seccion/protesta' },
-                  { label: 'Régimen',    href: '/seccion/regimen' },
-                  { label: 'Oposición',  href: '/seccion/oposicion' },
-                  { label: 'Transición', href: '/seccion/transicion' },
+                  { label: 'Apagones',    href: '/seccion/apagones' },
+                  { label: 'Represión',   href: '/seccion/represion' },
+                  { label: 'Economía',    href: '/seccion/economia' },
+                  { label: 'Protesta',    href: '/seccion/protesta' },
+                  { label: 'Régimen',     href: '/seccion/regimen' },
+                  { label: 'Oposición',   href: '/seccion/oposicion' },
+                  { label: 'Opinión',     href: '/seccion/opinion' },
+                  { label: 'Transición',  href: '/seccion/transicion' },
                 ].map(({ label, href }) => (
                   <li key={label}><Link href={href} className="footer-link font-sans">{label}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: '1.25rem' }}>Participar</h3>
+              <h3 className="font-sans font-semibold" style={{ fontSize: '0.625rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: '1.25rem' }}>Contacto</h3>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
                 <li><a href="/#denuncias" className="footer-link font-sans">Enviar denuncia</a></li>
                 <li><a href="mailto:redaccion@guajirodigital.com" className="footer-link font-sans">Redacción</a></li>
@@ -504,11 +543,17 @@ export default async function HomePage() {
               </ul>
             </div>
           </div>
+
+          {/* Bottom bar */}
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: '1.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
             <span className="font-sans" style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)' }}>
               © {new Date().getFullYear()} Guajiro Digital. Todos los derechos reservados.
             </span>
+            <span className="font-sans" style={{ fontSize: '0.6875rem', color: 'rgba(255,255,255,0.14)', letterSpacing: '0.04em' }}>
+              Proyecto independiente sin ánimo de lucro · Acceso libre · Sin cookies ni rastreo
+            </span>
           </div>
+
         </div>
       </footer>
     </>

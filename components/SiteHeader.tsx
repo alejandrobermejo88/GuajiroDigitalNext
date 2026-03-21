@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { NAV_ITEMS } from '@/lib/nav'
+import SearchButton from '@/components/SearchButton'
 
 interface Props {
   activeSection?: string
@@ -43,8 +44,8 @@ export default function SiteHeader({ activeSection }: Props) {
           style={{ backdropFilter: 'blur(8px)', borderBottom: '1px solid #E0D9CC' }}
           aria-label="Secciones"
         >
-          <div className="mx-auto" style={{ maxWidth: 1140, padding: '0 2rem' }}>
-            <ul className="flex items-center overflow-x-auto scrollbar-none">
+          <div className="mx-auto flex items-center" style={{ maxWidth: 1140, padding: '0 2rem' }}>
+            <ul className="flex items-center overflow-x-auto scrollbar-none flex-1">
               {NAV_ITEMS.map(({ label, href }) => (
                 <li key={label}>
                   <Link
@@ -60,6 +61,7 @@ export default function SiteHeader({ activeSection }: Props) {
                 </li>
               ))}
             </ul>
+            <SearchButton />
           </div>
         </nav>
       </header>
