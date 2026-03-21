@@ -44,7 +44,7 @@ export default function SiteHeader({ activeSection }: Props) {
           <div className="mx-auto flex items-center" style={{ maxWidth: 1140, padding: '0 2rem' }}>
             <ul className="flex items-center overflow-x-auto scrollbar-none flex-1">
               {NAV_ITEMS.map(({ label, href }) => (
-                <li key={label}>
+                <li key={label} style={{ flexShrink: 0 }}>
                   <Link
                     href={href}
                     className="nav-link"
