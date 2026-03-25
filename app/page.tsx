@@ -218,7 +218,7 @@ export default async function HomePage() {
             Periodismo independiente sobre Cuba
           </span>
           <time className="font-sans tabular-nums" style={{ fontSize: '0.6875rem', color: 'rgba(255,255,255,0.28)' }} dateTime={new Date().toISOString()}>
-            {new Date().toLocaleDateString('es-ES', { timeZone: 'Europe/Madrid', day: 'numeric', month: 'long', year: 'numeric' })} (hora de Madrid)
+            {new Date().toLocaleDateString('es-ES', { timeZone: 'Europe/Madrid', day: 'numeric', month: 'long', year: 'numeric' })} · {new Date().toLocaleTimeString('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hour12: false })} (hora de Madrid)
           </time>
         </div>
       </div>
