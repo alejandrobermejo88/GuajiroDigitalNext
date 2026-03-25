@@ -208,7 +208,6 @@ export default async function HomePage() {
 
   const latestBreaking = ultimaHoraItems[0] ?? lead
 
-  const updatedAt = noticias[0]?.updated_at ?? new Date().toISOString()
 
   return (
     <>
@@ -218,8 +217,8 @@ export default async function HomePage() {
           <span className="font-sans uppercase" style={{ fontSize: '0.625rem', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.4)' }}>
             Periodismo independiente sobre Cuba
           </span>
-          <time className="font-sans tabular-nums" style={{ fontSize: '0.6875rem', color: 'rgba(255,255,255,0.28)' }} dateTime={updatedAt}>
-            {fmtDate(updatedAt)}
+          <time className="font-sans tabular-nums" style={{ fontSize: '0.6875rem', color: 'rgba(255,255,255,0.28)' }} dateTime={new Date().toISOString()}>
+            {fmtDate(new Date().toISOString())}
           </time>
         </div>
       </div>
