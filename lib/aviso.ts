@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache'
 import { createAdminClient } from './supabase-admin'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -30,9 +31,11 @@ const DEFAULT_AVISO: AvisoEditorial = {
 /**
  * Lee el aviso editorial desde Supabase.
  * Siempre devuelve un objeto válido (nunca lanza).
- * Para uso en Server Components y Server Actions.
+ * noStore() garantiza que el dato nunca quede cacheado:
+ * cada render obtiene el valor actual de la base de datos.
  */
 export async function getAvisoEditorial(): Promise<AvisoEditorial> {
+  noStore()
   try {
     const sb = createAdminClient()
     const { data, error } = await sb
