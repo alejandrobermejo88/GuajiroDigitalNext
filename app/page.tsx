@@ -6,6 +6,7 @@ import type { Noticia } from '@/lib/noticias'
 import DenunciasForm from '@/components/DenunciasForm'
 import SearchButton from '@/components/SearchButton'
 import { NAV_ITEMS } from '@/lib/nav'
+import AvisoEditorialBanner from '@/components/AvisoEditorialBanner'
 
 export const revalidate = 60
 
@@ -300,6 +301,7 @@ export default async function HomePage() {
           </div>
         </nav>
       </header>
+      <AvisoEditorialBanner />
 
       {/* ── Main ── */}
       <main className="mx-auto" style={{ maxWidth: 1140, padding: '3.5rem 2rem 4rem' }}>
