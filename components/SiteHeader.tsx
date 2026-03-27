@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { NAV_ITEMS } from '@/lib/nav'
 import SearchButton from '@/components/SearchButton'
+import AvisoEditorialBanner from '@/components/AvisoEditorialBanner'
 
 interface Props {
   activeSection?: string
@@ -72,6 +73,7 @@ export default function SiteHeader({ activeSection }: Props) {
           </div>
         </nav>
       </header>
+      <AvisoEditorialBanner />
     </>
   )
 }

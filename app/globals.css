@@ -116,6 +116,45 @@
     font-weight: 400;
   }
 
+  /* ── Aviso editorial banner ──
+     Franja institucional sobria. Aparece debajo de la navegación
+     principal cuando el aviso está activo en el panel de admin.
+     Tono neutro, autoridad editorial. No compite con noticias urgentes.
+  ── */
+  .aviso-editorial-banner {
+    background-color: #F0EDE6;
+    border-top:    1px solid #C8BFB0;
+    border-bottom: 1px solid #E0D9CC;
+    padding: 10px 0;
+  }
+
+  .aviso-label {
+    flex-shrink:   0;
+    font-family:   'Inter', system-ui, sans-serif;
+    font-size:     0.5625rem;
+    font-weight:   600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color:         #767676;
+    white-space:   nowrap;
+  }
+
+  .aviso-sep {
+    flex-shrink: 0;
+    color:       #C8BFB0;
+    font-size:   0.875rem;
+    line-height: 1;
+  }
+
+  .aviso-text {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size:   0.875rem;
+    font-style:  italic;
+    color:       #383838;
+    line-height: 1.55;
+    font-optical-sizing: auto;
+  }
+
   /* ── Navigation link ── */
   .nav-link {
     font-family: 'Inter', system-ui, sans-serif;

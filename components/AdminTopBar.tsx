@@ -3,7 +3,7 @@ import Link from 'next/link'
 import AdminLogoutButton from './AdminLogoutButton'
 
 interface Props {
-  active?: 'noticias' | 'denuncias' | 'mule'
+  active?: 'noticias' | 'denuncias' | 'mule' | 'aviso'
 }
 
 export default function AdminTopBar({ active }: Props) {
@@ -49,6 +49,7 @@ export default function AdminTopBar({ active }: Props) {
           <Link href="/admin/noticias"  style={linkStyle('noticias')}>Noticias</Link>
           <Link href="/admin/denuncias" style={linkStyle('denuncias')}>Denuncias</Link>
           <Link href="/admin/mule"      style={linkStyle('mule')}>MULE</Link>
+          <Link href="/admin/aviso"     style={linkStyle('aviso')}>Aviso</Link>
         </nav>
 
         {/* Right side */}
